@@ -1,0 +1,90 @@
+{
+  "home": "Inicio",
+  "dashboard": "Tablero",
+  "profile": "Perfil",
+  "events": "Eventos",
+  "settings": "Configuraciones",
+   "hero-tagline": "Votos que cuentan",
+  "hero-title": "TU ELECCIÓN,",
+   "hero-title2": "SU ESCENARIO!",
+  "hero-description": "Clasificación de canciones en tiempo real y propinas para eventos en vivo. Crea la experiencia de concierto definitiva, diseñada por tu audiencia.",
+    "search-events-placeholder": "Buscar eventos por ubicación, artista o código del evento",
+      "vote": "Votar",
+      "effortless-interaction": "Interacción sin esfuerzo",
+      "how-it-works": "Cómo funciona",
+      "for-artists": "Para artistas",
+      "for-fans": "Para Fans"
+,
+      "steps": {
+    "1": {
+      "title": "Publica tus canciones",
+      "description": "Sube las canciones que estás listo para interpretar, creando una lista interactiva que fomente la participación de los fans."
+    },
+    "2": {
+      "title": "Genera el código del evento",
+      "description": "Una vez que tu lista esté lista, genera un código de evento único. Comparte este código con tu audiencia para iniciar la votación interactiva."
+    },
+    "3": {
+      "title": "Descubre qué quieren los fans",
+      "description": "A medida que los fans se unan y clasifiquen tus canciones, verás actualizaciones en tiempo real. Esta lista dinámica te guía sobre qué éxitos tocar a continuación."
+    },
+    "4": {
+      "title": "¡Haz vibrar el escenario!",
+      "description": "Con una lista curada por tus fans, sube al escenario y actualiza en vivo mientras interpretas cada canción."
+    }
+  },
+  "fansteps": {
+  "1": {
+    "title": "Ingresa el código del evento",
+    "description": "Usa el código único del evento para acceder a la lista interactiva del artista. Tu entrada digital para dar forma al concierto está a solo un código de distancia."
+  },
+  "2": {
+    "title": "Vota por tus canciones favoritas",
+    "description": "Una vez dentro, verás la lista de canciones del artista. Clasifica tus favoritas y observa cómo la lista evoluciona según los votos de los fans."
+  },
+  "3": {
+    "title": "Compra votos extra (opcional)",
+    "description": "¿Apasionado por una canción? Puedes comprar votos extra para darle un impulso a tus favoritas."
+  },
+  "4": {
+    "title": "¡Disfruta el show!",
+    "description": "Relájate y disfruta mientras el artista interpreta las canciones favoritas de la audiencia. Observa cómo la lista se actualiza en tiempo real con cada canción que se toca."
+  }
+},
+"our-features": "Nuestras Funciones",
+"features-tagline": "Eleva tu experiencia musical en vivo con recompensas interactivas en tiempo real",
+"feature-dynamic-title": "Listas Dinámicas",
+"feature-dynamic-desc": "Sube y gestiona tu repertorio de canciones para clasificaciones impulsadas por los fans",
+
+"feature-code-title": "Códigos de Evento Únicos",
+"feature-code-desc": "Genera códigos seguros y únicos para cada evento en vivo",
+
+"feature-insights-title": "Información en Tiempo Real",
+"feature-insights-desc": "Ve qué canciones son las favoritas de los fans durante el evento",
+
+"feature-monetization-title": "Opciones de Monetización",
+"feature-monetization-desc": "Activa propinas y compras de votos extra para aumentar ingresos",
+"featured-events": "Eventos Destacados",
+"event-name": "Nombre del Evento",
+"artist-name": "Nombre del Artista",
+"vote-now": "Votar Ahora",
+"faqs": "Preguntas Frecuentes",
+"faq-tagline": "Tus preguntas respondidas",
+"question-1": "¿Qué es un código de evento y cómo lo genero?",
+"question-2": "¿Cómo puedo ver qué canciones quieren que toque mis fans?",
+"question-3": "¿Hay alguna forma de cambiar la lista de canciones durante el evento?",
+"question-4": "¿Cómo gano dinero cuando los fans compran votos?",
+"question-5": "¿Puedo animar a los fans a comprar votos o dar propinas durante el evento?"
+
+
+
+
+
+
+
+
+
+
+
+
+}

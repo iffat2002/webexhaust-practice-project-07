@@ -1,0 +1,85 @@
+{
+  "home": "Home",
+  "dashboard": "Dashboard",
+  "profile": "Profile",
+   "events": "Events",
+    "settings": "Settings",
+  "hero-tagline":"Votes That Count",
+ "hero-title": "YOUR CHOICE,",
+  "hero-title2": "THEIR STAGE!",
+  "hero-description":"Real-Time Song Ranking and Tipping for Live Events. Create the ultimate concert experience, tailored by your audience.",
+    "search-events-placeholder": "Search Events by Location, Artist, or Event Code",
+      "vote": "Vote",
+      "effortless-interaction": "Effortless Interaction",
+      "how-it-works": "How It Works",
+      "for-artists": "For Artists",
+      "for-fans": "For Fans",
+      
+"steps": {
+    "1": {
+      "title": "List Your Songs",
+      "description": "Upload the songs you're ready to perform, creating an interactive setlist that sets the stage for fan engagement."
+    },
+    "2": {
+      "title": "Generate Event Code",
+      "description": "Once your setlist is ready, generate a unique event code. Share this code with your audience to kickstart the interactive ranking."
+    },
+    "3": {
+      "title": "See What Fans Want",
+      "description": "As fans join and rank your songs, you'll see real-time updates. This dynamic setlist guides you on what hits to play next."
+    },
+    "4": {
+      "title": "Rock the Stage!",
+      "description": "With a fan-curated setlist in hand, take the stage and make live updates as you perform each song."
+    }
+  },
+  "fansteps": {
+  "1": {
+    "title": "Enter Event Code",
+    "description": "Use the unique event code to access the artist's interactive setlist. Your digital ticket to shaping the concert is just a code away."
+  },
+  "2": {
+    "title": "Vote for Your Jams",
+    "description": "Once inside, you'll see the artist's song list. Rank your favorites and watch as the setlist evolves based on fan votes."
+  },
+  "3": {
+    "title": "Buy Extra Votes (Optional)",
+    "description": "Passionate about a song? You can purchase extra votes to give your top picks a ranking boost."
+  },
+  "4": {
+    "title": "Enjoy the Show!",
+    "description": "Sit back and enjoy as the artist performs the crowd's top picks. Watch the setlist update in real-time as each song is played."
+  }
+},
+"our-features": "Our Features",
+"features-tagline": "Elevate Your Live Music Experience with Interactive, Real-Time Rewards",
+"feature-dynamic-title": "Dynamic Setlists",
+"feature-dynamic-desc": "Upload and manage your song repertoire for fan-driven rankings",
+
+"feature-code-title": "Unique Event Codes",
+"feature-code-desc": "Generate secure, one-time codes for each live event",
+
+"feature-insights-title": "Real-Time Insights",
+"feature-insights-desc": "See which songs are fan favorites as the event unfolds",
+
+"feature-monetization-title": "Monetization Options",
+"feature-monetization-desc": "Enable tipping and extra vote purchases for added revenue",
+"featured-events": "Featured Events",
+"event-name": "Event Name",
+"artist-name": "Artist Name",
+"vote-now": "Vote Now",
+"faqs": "FAQs",
+"faq-tagline": "Your Questions Answered",
+"question-1": "What is an event code and how do I generate it?",
+"question-2": "How can I see what songs my fans want me to play?",
+"question-3": "Is there a way to change the setlist during the event?",
+"question-4": "How do I earn from fans buying votes?",
+"question-5": "Can I encourage fans to buy votes or tip during the event?"
+
+
+
+
+
+
+
+}

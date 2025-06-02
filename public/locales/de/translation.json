@@ -1,0 +1,93 @@
+{
+  "home": "Startseite",
+  "dashboard": "Übersicht",
+  "profile": "Profil",
+  "events": "Veranstaltungen",
+  "settings": "Einstellungen",
+    "hero-tagline": "Stimmen, die zählen",
+  "hero-title": "DEINE WAHL,",
+   "hero-title2": "IHRE BÜHNE!",
+  "hero-description": "Echtzeit-Song-Rangliste und Trinkgeld für Live-Events. Erschaffe das ultimative Konzerterlebnis, maßgeschneidert von deinem Publikum.",
+  "search-events-placeholder": "Veranstaltungen nach Ort, Künstler oder Eventcode suchen",
+     "vote": "Abstimmen",
+     "effortless-interaction": "Mühelose Interaktion",
+     "how-it-works": "Wie es funktioniert",
+     "for-artists": "Für Künstler",
+     "for-fans": "Für Fans"
+,
+     "steps": {
+    "1": {
+      "title": "Lade deine Songs hoch",
+      "description": "Lade die Songs hoch, die du live performen möchtest, und erstelle eine interaktive Setlist für das Publikum."
+    },
+    "2": {
+      "title": "Eventcode generieren",
+      "description": "Sobald deine Setlist bereit ist, generiere einen einzigartigen Eventcode. Teile diesen Code mit deinem Publikum, um das interaktive Ranking zu starten."
+    },
+    "3": {
+      "title": "Erfahre, was die Fans wollen",
+      "description": "Während Fans teilnehmen und deine Songs bewerten, erhältst du Echtzeit-Updates. Diese dynamische Setlist zeigt dir, welche Songs als Nächstes ankommen."
+    },
+    "4": {
+      "title": "Rock die Bühne!",
+      "description": "Mit einer von Fans kuratierten Setlist gehst du auf die Bühne und aktualisierst sie live, während du jeden Song spielst."
+    }
+  },
+  "fansteps": {
+  "1": {
+    "title": "Event-Code eingeben",
+    "description": "Verwende den einzigartigen Event-Code, um auf die interaktive Setlist des Künstlers zuzugreifen. Dein digitales Ticket, um das Konzert mitzugestalten, ist nur einen Code entfernt."
+  },
+  "2": {
+    "title": "Stimme für deine Lieblingssongs ab",
+    "description": "Sobald du drin bist, siehst du die Songliste des Künstlers. Bewerte deine Favoriten und beobachte, wie sich die Setlist basierend auf den Stimmen der Fans entwickelt."
+  },
+  "3": {
+    "title": "Kaufe zusätzliche Stimmen (optional)",
+    "description": "Leidenschaftlich für einen Song? Du kannst zusätzliche Stimmen kaufen, um deinen Favoriten einen Ranking-Boost zu geben."
+  },
+  "4": {
+    "title": "Genieße die Show!",
+    "description": "Lehne dich zurück und genieße, wie der Künstler die beliebtesten Songs der Menge spielt. Sieh zu, wie sich die Setlist in Echtzeit mit jedem gespielten Song aktualisiert."
+  }
+},
+"our-features": "Unsere Funktionen",
+"features-tagline": "Steigere dein Live-Musik-Erlebnis mit interaktiven Echtzeit-Belohnungen",
+"feature-dynamic-title": "Dynamische Setlisten",
+"feature-dynamic-desc": "Lade dein Songrepertoire hoch und verwalte es für fanbasierte Bewertungen",
+
+"feature-code-title": "Einzigartige Event-Codes",
+"feature-code-desc": "Erstelle sichere, einmalige Codes für jedes Live-Event",
+
+"feature-insights-title": "Echtzeit-Einblicke",
+"feature-insights-desc": "Sieh, welche Songs bei den Fans beliebt sind, während das Event läuft",
+
+"feature-monetization-title": "Monetarisierungsoptionen",
+"feature-monetization-desc": "Aktiviere Trinkgelder und zusätzliche Stimmenkäufe für mehr Einnahmen",
+"featured-events": "Empfohlene Events",
+"event-name": "Veranstaltungsname",
+"artist-name": "Name des Künstlers",
+"vote-now": "Jetzt Abstimmen",
+"faqs": "Häufige Fragen",
+"faq-tagline": "Deine Fragen beantwortet",
+
+"question-1": "Was ist ein Event-Code und wie erstelle ich ihn?",
+"question-2": "Wie kann ich sehen, welche Songs meine Fans hören möchten?",
+"question-3": "Gibt es eine Möglichkeit, die Setlist während des Events zu ändern?",
+"question-4": "Wie verdiene ich Geld, wenn Fans Stimmen kaufen?",
+"question-5": "Kann ich Fans während des Events dazu ermutigen, Stimmen zu kaufen oder Trinkgeld zu geben?"
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+}
