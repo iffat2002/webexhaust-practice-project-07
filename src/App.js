@@ -6,32 +6,7 @@ import sample from "./audio.mp3";
 function App() {
   const { t, i18n } = useTranslation();
   const steps = [1, 2, 3, 4];
-  const fanSteps = [
-    {
-      number: 1,
-      title: "Enter Event Code",
-      description:
-        "Use the unique event code to access the artist's interactive setlist. Your digital ticket to shaping the concert is just a code away.",
-    },
-    {
-      number: 2,
-      title: "Vote for Your Jams",
-      description:
-        "Once inside, you'll see the artist's song list. Rank your favorites and watch as the setlist evolves based on fan votes.",
-    },
-    {
-      number: 3,
-      title: "Buy Extra Votes (Optional)",
-      description:
-        "Passionate about a song? You can purchase extra votes to give your top picks a ranking boost.",
-    },
-    {
-      number: 4,
-      title: "Enjoy the Show!",
-      description:
-        "Sit back and enjoy as the artist performs the crowd's top picks. Watch the setlist update in real-time as each song is played.",
-    },
-  ];
+
 
   const topHits = [
     { title: "Levitating", votes: "100K" },
@@ -208,11 +183,11 @@ function App() {
               </svg>
             </div>
             <nav className="h-center">
-              <a href="#">{t("home")}</a>
-              <a href="#">{t("dashboard")}</a>
-              <a href="#">{t("profile")}</a>
-              <a href="#">{t("events")}</a>
-              <a href="#">{t("settings")}</a>
+              <a href="/">{t("home")}</a>
+              <a href="/">{t("dashboard")}</a>
+              <a href="/">{t("profile")}</a>
+              <a href="/">{t("events")}</a>
+              <a href="/">{t("settings")}</a>
             </nav>
             <div className="h-right">
               <div className="language">
@@ -348,11 +323,11 @@ function App() {
           </div>
           {isMobileOpen && (
             <nav className="mobile-menu">
-              <a href="#">{t("home")}</a>
-              <a href="#">{t("dashboard")}</a>
-              <a href="#">{t("profile")}</a>
-              <a href="#">{t("events")}</a>
-              <a href="#">{t("settings")}</a>
+              <a href="/">{t("home")}</a>
+              <a href="/">{t("dashboard")}</a>
+              <a href="/">{t("profile")}</a>
+              <a href="/">{t("events")}</a>
+              <a href="/">{t("settings")}</a>
               <span>
                 <a class="gray-btn" href="/login">
                   Login
@@ -656,6 +631,7 @@ function App() {
       </section>
       <section className="events-section">
         <img
+        alt=""
           className="events-bg"
           src="https://hitpikr-webexhaust.netlify.app/static/media/rd-bg-img.a8f31e480c29d477cafd.png"
         ></img>
