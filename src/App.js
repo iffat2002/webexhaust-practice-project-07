@@ -1,12 +1,18 @@
 import "./styles/main.scss";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Audio from "./components/Audio";
 import { useTranslation } from "react-i18next";
 import sample from "./audio.mp3";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type";
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(ScrollTrigger, SplitText);
 function App() {
+  const scrollRef = useRef(null);
+  const locoScroll = useRef(null);
   const { t, i18n } = useTranslation();
   const steps = [1, 2, 3, 4];
-
 
   const topHits = [
     { title: "Levitating", votes: "100K" },
@@ -57,9 +63,105 @@ function App() {
     i18n.changeLanguage(e.target.value);
   };
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+
+  useEffect(() => {
+    gsap.fromTo(
+      ".hero-right img",
+      {
+        y: 160,
+      },
+      {
+        y: 0,
+        ease: "power3.inOut",
+        scrollTrigger: {
+          trigger: ".hero-section",
+          start: "top top",
+          scrub: true,
+          duration: 1,
+          toggleActions: "start none none none",
+        },
+      }
+    );
+
+    gsap.utils.toArray(".fade-text").forEach((el) => {
+      gsap.fromTo(
+        el,
+        { opacity: 0, x: 20 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%", // 10% into viewport
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    });
+
+    const split = new SplitType(".hero-title", {
+      types: "chars", // split into letters
+    });
+
+    gsap.fromTo(
+      split.chars,
+      {
+        opacity: 0,
+
+        filter: "blur(5px)",
+      },
+      {
+        opacity: 1,
+
+        filter: "blur(0px)",
+        stagger: 0.05,
+        duration: 0.2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".hero-title",
+          start: "top 60%",
+          toggleActions: "play none none none",
+          scrub: false,
+        },
+      }
+    );
+
+    gsap.utils.toArray(".anim").forEach((el) => {
+      gsap.fromTo(
+        el,
+        { y: 100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out",
+          delay: 0.5,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    });
+
+    gsap.fromTo(
+      ".hero-right img",
+      { scaleX: 0, transformOrigin: "left" },
+      {
+        scaleX: 1,
+
+        duration: 2,
+        ease: "power2.out",
+      }
+    );
+  }, []);
   return (
     <div>
-      <header className="header" style={{display: isMobileOpen && "fixed"}}>
+      <header className="header" style={{ display: isMobileOpen && "fixed" }}>
         <div className="box">
           <div className="header-content">
             <div className="h-left">
@@ -298,27 +400,38 @@ function App() {
                 alt="avatar"
                 className="avatar"
               />
-            {  !isMobileOpen ? <svg
-              onClick={()=>setIsMobileOpen(true)}
-                stroke="currentColor"
-                fill="currentColor"
-                stroke-width="0"
-                viewBox="0 0 16 16"
-                height="30"
-                width="30"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-                ></path>
-              </svg>
-              :
-              <svg 
-                onClick={()=>setIsMobileOpen(false)}
-              stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="30" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path></svg>
-              }
-              
+              {!isMobileOpen ? (
+                <svg
+                  onClick={() => setIsMobileOpen(true)}
+                  id="menu"
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  height="30"
+                  width="30"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                  ></path>
+                </svg>
+              ) : (
+                <svg
+                  id="menu"
+                  onClick={() => setIsMobileOpen(false)}
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  height="30"
+                  width="30"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
+                </svg>
+              )}
             </div>
           </div>
           {isMobileOpen && (
@@ -370,14 +483,14 @@ function App() {
                 <br></br>
                 {t("hero-title2")}
               </h1>
-              <p className="hero-subtitle">{t("hero-description")}</p>
-              <div className="hero-search">
+              <p className="hero-subtitle anim">{t("hero-description")}</p>
+              <div className="hero-search anim">
                 <input
                   type="text"
                   placeholder={t("search-events-placeholder")}
                 />
                 <button>
-                 <span> {t("vote")}{" "}</span>
+                  <span> {t("vote")} </span>
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
@@ -432,7 +545,7 @@ function App() {
                     )}
                   </div>
 
-                  <div className="point-content">
+                  <div className="point-content fade-text">
                     <h6>{t(`steps.${num}.title`)}</h6>
                     <p className={index === steps.length - 1 ? "pb-0" : ""}>
                       {t(`steps.${num}.description`)}
@@ -454,7 +567,7 @@ function App() {
                     )}
                   </div>
 
-                  <div className="point-content">
+                  <div className="point-content fade-text">
                     <h6>{t(`fansteps.${num}.title`)}</h6>
                     <p className={index === steps.length - 1 ? "pb-0" : ""}>
                       {t(`fansteps.${num}.description`)}
@@ -476,7 +589,7 @@ function App() {
           <div className="features-box">
             <div className="of-grid box-1">
               <div className="content-grid">
-                <div>
+                <div className="fade-text">
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
@@ -494,7 +607,7 @@ function App() {
                   <h3>{t("feature-dynamic-title")}</h3>
                   <p>{t("feature-dynamic-desc")}</p>
                 </div>
-                <div>
+                <div className="fade-text">
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
@@ -509,7 +622,7 @@ function App() {
                   <h3>{t("feature-code-title")}</h3>
                   <p>{t("feature-code-desc")}</p>
                 </div>
-                <div>
+                <div className="fade-text">
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
@@ -527,7 +640,7 @@ function App() {
                   <p>{t("feature-insights-desc")}</p>
                 </div>
 
-                <div>
+                <div className="fade-text">
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
@@ -558,7 +671,7 @@ function App() {
             </div>
             <div className="of-grid box-2">
               <div className="content-grid">
-                <div>
+                <div className="fade-text">
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
@@ -576,7 +689,7 @@ function App() {
                   <h3>{t("feature-dynamic-title")}</h3>
                   <p>{t("feature-dynamic-desc")}</p>
                 </div>
-                <div>
+                <div className="fade-text">
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
@@ -591,7 +704,7 @@ function App() {
                   <h3>{t("feature-code-title")}</h3>
                   <p>{t("feature-code-desc")}</p>
                 </div>
-                <div>
+                <div className="fade-text">
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
@@ -609,7 +722,7 @@ function App() {
                   <p>{t("feature-insights-desc")}</p>
                 </div>
 
-                <div>
+                <div className="fade-text">
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
@@ -631,7 +744,7 @@ function App() {
       </section>
       <section className="events-section">
         <img
-        alt=""
+          alt=""
           className="events-bg"
           src="https://hitpikr-webexhaust.netlify.app/static/media/rd-bg-img.a8f31e480c29d477cafd.png"
         ></img>
@@ -641,7 +754,7 @@ function App() {
             <h2 className="heading">{t("featured-events")}</h2>
           </div>
 
-          <div className="concert-card">
+          <div className="concert-card anim">
             <div className="concert-header">
               <span className="featured">
                 Featured{" "}

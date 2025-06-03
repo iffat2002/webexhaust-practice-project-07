@@ -90,7 +90,7 @@ header {
         }
        
       }
-       svg{
+       #menu{
           display:none;
            @media screen and (max-width:950px) {
           display: flex;
@@ -155,9 +155,18 @@ height: 100vh;
       bottom: 0;
       transform: translate(0px, 50%);
       z-index: 10;
-      .cirlce-img {
+      .circle-img {
         object-fit: contain;
         width: 100%;
+         animation: rotate 20s linear infinite;
+         @keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
       }
       .arrow-img {
         position: absolute;
@@ -265,6 +274,7 @@ height: 100vh;
             width: max-content;
             font-size: 1.65rem;
             color: black;
+          
             @media screen and (max-width: 750px) {
      padding: 1.25rem 2.5rem;
     }
@@ -283,6 +293,13 @@ height: 100vh;
     }
             }
           }
+            button:hover{
+              svg{
+                  rotate:-40deg;
+                transform: translate(4px);
+  transition: all 0.6s ease;
+              }
+            }
         }
       }
 
@@ -328,6 +345,7 @@ height: 100vh;
             font-size: 1.6rem;
             margin-top: 0.3rem;
           }
+        
         }
       }
     }
@@ -804,6 +822,10 @@ height: 100%;
     border: none;
   }
 }
+.vote-now button:hover{
+  background-color: hsla(0, 0%, 100%, .15);
+  cursor: pointer;
+}
 
 .faq-section {
   width: 100%;
@@ -879,6 +901,7 @@ height: 100%;
       }
       .arrow.rotate {
         rotate: 180deg;
+        transition: all 0.2s ease-in;
       }
       svg {
         width: 1.5rem;
@@ -943,7 +966,11 @@ fill:white;
    height: 4rem;
 }
     }
-    
+    .icon-outline:hover{
+      background: #3b3a3a;
+      cursor: pointer;
+      transition: background 0.2s ease-in ;
+    }
     
   }
 }
