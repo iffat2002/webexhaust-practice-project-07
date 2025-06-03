@@ -88,13 +88,14 @@ header {
         @media screen and (max-width:950px) {
           display: none;
         }
-        svg{
+       
+      }
+       svg{
           display:none;
            @media screen and (max-width:950px) {
           display: flex;
         }
         }
-      }
     }
   }
   .mobile-menu{
