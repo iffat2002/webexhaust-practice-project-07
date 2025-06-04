@@ -409,7 +409,7 @@ function Home() {
                 {/* <option value="de" class="lang-options">
                   DE
                 </option> */}
-                <label htmlFor="lang"></label>
+             <label htmlFor="language-select" className="sr-only">Select Language</label>
                 <select
                   class="lang-select"
                   onChange={changeLanguage}
