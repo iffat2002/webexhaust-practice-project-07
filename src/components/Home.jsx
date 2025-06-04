@@ -1,16 +1,16 @@
 import "../styles/main.scss";
 import React, { useState, useEffect, lazy, useMemo, useCallback} from "react";
 import { useTranslation } from "react-i18next";
+import background from "../images/background.png";
+import singers from "../images/singers.jpg"
 import gsap from "gsap";
 import sample from "../audio.mp3";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
-// Lazy load components and heavy dependencies
 const Audio = lazy(() => import('./Audio'));
 const LazyImage = lazy(() => import('./LazyImage'));
 
-// Register GSAP plugins once
 gsap.registerPlugin(ScrollTrigger, SplitText);
 function Home() {
 
@@ -68,104 +68,7 @@ function Home() {
   }, [i18n]);
 
 
-  // useEffect(() => {
-  //   gsap.fromTo(
-  //     ".hero-right img",
-  //     {
-  //       y: 160,
-  //     },
-  //     {
-  //       y: 0,
-  //       ease: "power3.inOut",
-  //       scrollTrigger: {
-  //         trigger: ".hero-section",
-  //         start: "top top",
-  //         scrub: true,
-  //         duration: 1,
-  //         toggleActions: "start none none none",
-  //       },
-  //     }
-  //   );
 
-  //   gsap.utils.toArray(".fade-text").forEach((el) => {
-  //     gsap.fromTo(
-  //       el,
-  //       { opacity: 0, x: 20 },
-  //       {
-  //         opacity: 1,
-  //         x: 0,
-  //         duration: 1,
-  //         ease: "power2.out",
-  //         scrollTrigger: {
-  //           trigger: el,
-  //           start: "top 90%", // 10% into viewport
-  //           toggleActions: "play none none none",
-  //         },
-  //       }
-  //     );
-  //   });
-
-  //   const split = new SplitType(".hero-title", {
-  //     types: "chars", // split into letters
-  //   });
-
-  //   gsap.fromTo(
-  //     split.chars,
-  //     {
-  //       opacity: 0,
-
-  //       filter: "blur(5px)",
-  //     },
-  //     {
-  //       opacity: 1,
-
-  //       filter: "blur(0px)",
-  //       stagger: 0.05,
-  //       duration: 0.2,
-  //       ease: "power2.out",
-  //       scrollTrigger: {
-  //         trigger: ".hero-title",
-  //         start: "top 60%",
-  //         toggleActions: "play none none none",
-  //         scrub: false,
-  //       },
-  //     }
-  //   );
-
-  //   gsap.utils.toArray(".anim").forEach((el) => {
-  //     gsap.fromTo(
-  //       el,
-  //       { y: 100, opacity: 0 },
-  //       {
-  //         y: 0,
-  //         opacity: 1,
-  //         duration: 1,
-  //         ease: "power2.out",
-  //         delay: 0.5,
-  //         scrollTrigger: {
-  //           trigger: el,
-  //           start: "top 90%",
-
-  //           toggleActions: "play none none none",
-  //         },
-  //       }
-  //     );
-  //   });
-
-  //   gsap.fromTo(
-  //     ".hero-right img",
-  //     { scaleX: 0, transformOrigin: "left" },
-  //     {
-  //       scaleX: 1,
-
-  //       duration: 2,
-  //       ease: "power2.out",
-  //     }
-  //   );
-  // }, []);
-  
-  
-  // Optimize animations with useLayoutEffect and cleanup
   useEffect(() => {
     const animations = [];
 
@@ -276,8 +179,8 @@ function Home() {
   // Preload critical images
   useEffect(() => {
     const preloadImages = [
-      "https://hitpikr-webexhaust.netlify.app/static/media/hero-img-4.4cb9cfcf608c095f8d80.jpg",
-      "https://hitpikr-webexhaust.netlify.app/static/media/waveform-img-h-2.380a64ee47c7d86061a7.png"
+     singers,
+   background
     ];
     
     preloadImages.forEach((src) => {
@@ -523,7 +426,7 @@ function Home() {
                 </select>
               </div>
               <img  loading="lazy"
-                src="https://hitpikr-webexhaust.netlify.app/static/media/hero-img-4.4cb9cfcf608c095f8d80.jpg"
+                src={singers}
                 alt="avatar"
                 className="avatar"
               />
@@ -584,7 +487,7 @@ function Home() {
        <React.Suspense fallback={<div className="image-placeholder" />}>
           <LazyImage
             id="hero-bg"
-            src="https://hitpikr-webexhaust.netlify.app/static/media/waveform-img-h-2.380a64ee47c7d86061a7.png"
+            src={background}
             alt=""
             className="hero-bg-image"
           />
@@ -650,7 +553,7 @@ function Home() {
             </div>
             <div className="hero-right">
               <img  loading="lazy"
-                src="https://hitpikr-webexhaust.netlify.app/static/media/hero-img-4.4cb9cfcf608c095f8d80.jpg"
+                src={singers}
                 alt="Guitar player and tattooed woman"
               />
             </div>
@@ -791,7 +694,7 @@ function Home() {
             </div>
             <div className="of-grid box-a">
               <img  loading="lazy"
-                src="https://hitpikr-webexhaust.netlify.app/static/media/hero-img-4.4cb9cfcf608c095f8d80.jpg"
+                src={singers}
                 alt="Guitar player and tattoo"
               ></img>
             </div>
@@ -942,7 +845,7 @@ function Home() {
 
             <div className="concert-info">
               <img  loading="lazy"
-                src="https://hitpikr-webexhaust.netlify.app/static/media/hero-img-4.4cb9cfcf608c095f8d80.jpg"
+                src={singers}
                 alt="artist"
                 className="artist-img"
               />
