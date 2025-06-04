@@ -409,6 +409,7 @@ function Home() {
                 {/* <option value="de" class="lang-options">
                   DE
                 </option> */}
+                <label htmlFor="lang"></label>
                 <select
                   class="lang-select"
                   onChange={changeLanguage}
@@ -524,7 +525,7 @@ function Home() {
                   type="text"
                   placeholder={t("search-events-placeholder")}
                 />
-                <button>
+                <button aria-label="Vote">
                   <span> {t("vote")} </span>
                   <svg
                     stroke="currentColor"
@@ -882,7 +883,7 @@ function Home() {
               </div>
 
               <div className="vote-now">
-                <button>
+                <button aria-label="Vote Now"> 
                   {t("vote-now")}
                   <svg
                     stroke="currentColor"

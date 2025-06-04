@@ -1,7 +1,8 @@
 
 import "./styles/main.scss";
 import React, {  Suspense } from "react";
-import Home from "./components/Home";
+
+const Home = React.lazy(() => import("./components/Home"));
 
 function App() {
 
